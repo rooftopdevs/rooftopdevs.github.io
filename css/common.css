@@ -50,7 +50,7 @@
     margin-left: 1.5rem;
 }
 
-.site-description > a {
+.site-description>a {
     font-size: 0.8rem;
 }
 
@@ -89,7 +89,7 @@
     color: orange;
 }
 
-.row > li {
+.row>li {
     padding: 0 8px;
 }
 
@@ -113,7 +113,7 @@
 
 }
 
-.dropdown:hover .dropdown-content > a {
+.dropdown:hover .dropdown-content>a {
     color: #ffffff;
 
     font-size: 0.8rem;
@@ -138,29 +138,51 @@
     margin-bottom: 1rem;
 }
 
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
+.slideshow-wrapper {
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc; 
-  }
-  
-  .panel {
-    padding: 0 18px;
+    height: 28rem;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
     display: none;
-    background-color: white;
-    overflow: hidden;
-  }
+}
+
+.mySlides > img {
+    height: 28rem;
+    object-fit: cover;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
 
 @media (max-width: 720px) {
     #pc-header {
@@ -177,7 +199,7 @@
     }
 
     #footer-container {
-        align-items:  start;
+        align-items: start;
         padding-left: 1.6rem;
         padding-right: 1.6rem;
     }
@@ -186,7 +208,7 @@
         height: 36px;
     }
 
-    .row > li {
+    .row>li {
         padding: 0;
         padding: 0.2rem 0;
     }
@@ -202,7 +224,16 @@
         justify-content: start;
     }
 
-    #footer-container > div {
+    .slideshow-wrapper {
+        height: 18rem;
+    }
+    
+    .mySlides > img {
+        height: 18rem;
+        object-fit: cover;
+    }
+
+    #footer-container>div {
         margin-bottom: 2rem;
     }
 }
